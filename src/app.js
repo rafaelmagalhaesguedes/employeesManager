@@ -12,6 +12,8 @@ app.get('/', (_req, res) => {
   res.status(200).json({ message: 'Server is running!' });
 });
 
+app.get('/employees/:id', employee.getById);
+
 app.get('/employees', employee.getAll);
 
 module.exports = app;
